@@ -124,7 +124,7 @@ def get_examples(data_path, tok2id, max_seq_len,
             l.strip().split(',')[0]: [float(x) for x in l.strip().split(',')[1:]]
             for l in category_fp
         }
-    for i, (line) in enumerate(tqdm(open(data_path))):
+    for i, (line) in enumerate(tqdm(open(data_path, "r", encoding="utf-8"))):
         parts = line.strip().split('\t')
 
         # if there pos/rel info
