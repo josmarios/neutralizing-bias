@@ -6,6 +6,7 @@ sudo apt-get -y install git
 sudo apt-get -y install python3.7
 sudo apt-get -y install python-pip
 sudo apt-get -y install virtualenv
+sudo apt-get -y install unzip
 
 # Virtual Environment
 echo 'SETTING UP VIRTUAL ENVIRONMENT...'
