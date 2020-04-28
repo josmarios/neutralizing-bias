@@ -2,27 +2,26 @@
 
 # General Requirements
 echo 'INSTALLING GENERAL REQUIREMENTS...'
-sudo apt-get -y install git
 sudo apt-get -y install python3.7
-sudo apt-get -y install python-pip
+sudo apt-get -y install python3-pip
 sudo apt-get -y install virtualenv
 sudo apt-get -y install unzip
 
 # Virtual Environment
 echo 'SETTING UP VIRTUAL ENVIRONMENT...'
-pip install setuptools
+pip3 --no-cache-dir install setuptools
 virtualenv venv
 virtualenv -p /usr/bin/python3 venv
 source venv/bin/activate
 
 # Dependencies
-pip install -r requirements.txt
+pip3 --no-cache-dir install -r requirements.txt
 
 # Get Data
 echo 'DOWNLOADING DATA...'
 wget http://bit.ly/bias-corpus
 unzip bias-corpus
-export DATA=$(pwd)/bias_data/
+export DATA=$(pwd)/bias_data/WNC
 
 # Train
 echo 'RUNNING TAGGER...'
